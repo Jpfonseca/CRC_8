@@ -39,3 +39,6 @@
 */timing/
 */testbench/
 */*_sim/
+
+#ignore C FIles
+*.o
