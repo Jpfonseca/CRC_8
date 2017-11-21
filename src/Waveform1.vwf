@@ -1,13 +1,13 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC -c CRC_Encoder --vector_source="/home/planck/Desktop/ACA/ACA_CRC/Waveform1.vwf" --testbench_file="/home/planck/Desktop/ACA/ACA_CRC/simulation/qsim/Waveform1.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC -c CRC_Encoder --vector_source="/home/planck/Desktop/ACA/ACA_CRC/Waveform1.vwf" --testbench_file="/home/planck/Desktop/ACA/ACA_CRC/simulation/qsim/Waveform1.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/planck/Desktop/ACA/ACA_CRC/simulation/qsim/" CRC -c CRC_Encoder</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/planck/Desktop/ACA/ACA_CRC/simulation/qsim/" CRC -c CRC_Encoder</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC -c CRC_Encoder --vector_source="/home/planck/Desktop/ACA/ACA_CRC/src/Waveform1.vwf" --testbench_file="/home/planck/Desktop/ACA/ACA_CRC/src/simulation/qsim/Waveform1.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CRC -c CRC_Encoder --vector_source="/home/planck/Desktop/ACA/ACA_CRC/src/Waveform1.vwf" --testbench_file="/home/planck/Desktop/ACA/ACA_CRC/src/simulation/qsim/Waveform1.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/planck/Desktop/ACA/ACA_CRC/src/simulation/qsim/" CRC -c CRC_Encoder</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/planck/Desktop/ACA/ACA_CRC/src/simulation/qsim/" CRC -c CRC_Encoder</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work CRC_Encoder.vho
 vcom -work work Waveform1.vwf.vht
-vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.CRC_Encoder_vhd_vec_tst
+vsim -novopt -c -t 1ps -L cycloneiv -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.CRC_Encoder_vhd_vec_tst
 vcd file -direction CRC.msim.vcd
 vcd add -internal CRC_Encoder_vhd_vec_tst/*
 vcd add -internal CRC_Encoder_vhd_vec_tst/i1/*
@@ -25,7 +25,7 @@ quit -f
 vlib work
 vcom -work work CRC_Encoder.vho
 vcom -work work Waveform1.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax CRC_Encoder_vhd_vec_tst/i1=CRC_Encoder_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.CRC_Encoder_vhd_vec_tst
+vsim -novopt -c -t 1ps -sdfmax CRC_Encoder_vhd_vec_tst/i1=CRC_Encoder_vhd.sdo -L cycloneiv -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.CRC_Encoder_vhd_vec_tst
 vcd file -direction CRC.msim.vcd
 vcd add -internal CRC_Encoder_vhd_vec_tst/*
 vcd add -internal CRC_Encoder_vhd_vec_tst/i1/*
@@ -321,7 +321,8 @@ TRANSITION_LIST("dIN_8")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 990.0;
 	}
 }
 
@@ -330,7 +331,9 @@ TRANSITION_LIST("dIN_9")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 970.0;
 	}
 }
 
@@ -339,7 +342,9 @@ TRANSITION_LIST("dIN_10")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 950.0;
 	}
 }
 
@@ -348,7 +353,9 @@ TRANSITION_LIST("dIN_11")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 930.0;
 	}
 }
 
@@ -357,7 +364,9 @@ TRANSITION_LIST("dIN_12")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 910.0;
 	}
 }
 
@@ -366,7 +375,9 @@ TRANSITION_LIST("dIN_13")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 100.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 890.0;
 	}
 }
 
@@ -375,7 +386,9 @@ TRANSITION_LIST("dIN_14")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 870.0;
 	}
 }
 
@@ -384,7 +397,9 @@ TRANSITION_LIST("dIN_15")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 850.0;
 	}
 }
 
@@ -393,7 +408,9 @@ TRANSITION_LIST("dIN_16")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 830.0;
 	}
 }
 
@@ -402,7 +419,9 @@ TRANSITION_LIST("dIN_17")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 810.0;
 	}
 }
 
@@ -411,7 +430,9 @@ TRANSITION_LIST("dIN_18")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 200.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 790.0;
 	}
 }
 
@@ -420,7 +441,9 @@ TRANSITION_LIST("dIN_19")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 770.0;
 	}
 }
 
@@ -429,7 +452,9 @@ TRANSITION_LIST("dIN_20")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 750.0;
 	}
 }
 
@@ -438,7 +463,9 @@ TRANSITION_LIST("dIN_21")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 260.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 730.0;
 	}
 }
 
@@ -447,7 +474,9 @@ TRANSITION_LIST("dIN_22")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 280.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 710.0;
 	}
 }
 
@@ -456,7 +485,9 @@ TRANSITION_LIST("dIN_23")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 300.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 690.0;
 	}
 }
 

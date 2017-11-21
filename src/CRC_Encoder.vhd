@@ -74,7 +74,7 @@ BEGIN
 	x0:Arith_xor4to1 port map(d8and9,dIN_11,d14to16,d21to23,CRC_0);
 	x1:Arith_xor4to1 port map(d9and10,d15to17,dIN_12,d22and23,CRC_1);
 	x2:Arith_xor4to1 port map(d8to10,d13to15,d17and18,d21and22,CRC_2);
-	x3:Arith_xor4to1 port map(d9to11,d15and16,d18and19,d22and23,CRC_3);
+	x3:Arith_xor4to1 port map(d9to11,d14to16,d18and19,d22and23,CRC_3);
 	x4:Arith_xor4to1 port map(d8to10,d12_14_17,d19and20,d21and22,CRC_4);
 	x5:Arith_xor4to1 port map(d9to11,d13and15,dIN_18,d20to23,CRC_5);
 	x6:Arith_xor4to1 port map(d8to10,dIN_12,dIN_15,dIN_19,CRC_6);
