@@ -1,0 +1,45 @@
+# do CRC.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:41:10 on Nov 21,2017
+# vcom -work work CRC_Encoder.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneiv_atom_pack
+# -- Loading package cycloneiv_components
+# -- Compiling entity CRC_ENCODER_STD
+# -- Compiling architecture structure of CRC_ENCODER_STD
+# End time: 02:41:10 on Nov 21,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:41:10 on Nov 21,2017
+# vcom -work work Waveform_std.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CRC_ENCODER_STD_vhd_vec_tst
+# -- Compiling architecture CRC_ENCODER_STD_arch of CRC_ENCODER_STD_vhd_vec_tst
+# End time: 02:41:10 on Nov 21,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneiv -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.CRC_ENCODER_STD_vhd_vec_tst 
+# Start time: 02:41:11 on Nov 21,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.crc_encoder_std_vhd_vec_tst(crc_encoder_std_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneiv.cycloneiv_atom_pack(body)
+# Loading cycloneiv.cycloneiv_components
+# Loading work.crc_encoder_std(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiv.cycloneiv_io_obuf(arch)
+# Loading cycloneiv.cycloneiv_io_ibuf(arch)
+# Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)
+# after#31
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# End time: 02:41:11 on Nov 21,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

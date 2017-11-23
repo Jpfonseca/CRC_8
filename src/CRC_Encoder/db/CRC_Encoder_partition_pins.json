@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CRC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[12]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

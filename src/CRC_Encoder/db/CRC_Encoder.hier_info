@@ -1,0 +1,403 @@
+|CRC_ENCODER_STD
+dIN[0] => CRC_ENCODER:crc_16to8.dIN_8
+dIN[1] => CRC_ENCODER:crc_16to8.dIN_9
+dIN[2] => CRC_ENCODER:crc_16to8.dIN_10
+dIN[3] => CRC_ENCODER:crc_16to8.dIN_11
+dIN[4] => CRC_ENCODER:crc_16to8.dIN_12
+dIN[5] => CRC_ENCODER:crc_16to8.dIN_13
+dIN[6] => CRC_ENCODER:crc_16to8.dIN_14
+dIN[7] => CRC_ENCODER:crc_16to8.dIN_15
+dIN[8] => CRC_ENCODER:crc_16to8.dIN_16
+dIN[9] => CRC_ENCODER:crc_16to8.dIN_17
+dIN[10] => CRC_ENCODER:crc_16to8.dIN_18
+dIN[11] => CRC_ENCODER:crc_16to8.dIN_19
+dIN[12] => CRC_ENCODER:crc_16to8.dIN_20
+dIN[13] => CRC_ENCODER:crc_16to8.dIN_21
+dIN[14] => CRC_ENCODER:crc_16to8.dIN_22
+dIN[15] => CRC_ENCODER:crc_16to8.dIN_23
+CRC[0] <= CRC_ENCODER:crc_16to8.CRC_0
+CRC[1] <= CRC_ENCODER:crc_16to8.CRC_1
+CRC[2] <= CRC_ENCODER:crc_16to8.CRC_2
+CRC[3] <= CRC_ENCODER:crc_16to8.CRC_3
+CRC[4] <= CRC_ENCODER:crc_16to8.CRC_4
+CRC[5] <= CRC_ENCODER:crc_16to8.CRC_5
+CRC[6] <= CRC_ENCODER:crc_16to8.CRC_6
+CRC[7] <= CRC_ENCODER:crc_16to8.CRC_7
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8
+dIN_8 => Arith_xor2to1:d8_and10.x0
+dIN_8 => Arith_xor2to1:d8_and9.x0
+dIN_9 => Arith_xor2to1:d8_and9.x1
+dIN_9 => Arith_xor2to1:d9_and10.x0
+dIN_9 => Arith_xor2to1:d8_to10.x1
+dIN_10 => Arith_xor2to1:d8_and10.x1
+dIN_10 => Arith_xor2to1:d9_and10.x1
+dIN_11 => Arith_xor2to1:d9_to11.x1
+dIN_11 => Arith_xor4to1:x0.x1
+dIN_12 => Arith_xor3to1:d12o_14_17.x0
+dIN_12 => Arith_xor4to1:x1.x2
+dIN_12 => Arith_xor4to1:x6.x1
+dIN_13 => Arith_xor2to1:d13_and15.x0
+dIN_14 => Arith_xor2to1:d_14to16.x1
+dIN_14 => Arith_xor2to1:d13_to15.x1
+dIN_14 => Arith_xor3to1:d12o_14_17.x1
+dIN_15 => Arith_xor2to1:d15_and16.x0
+dIN_15 => Arith_xor2to1:d13_and15.x1
+dIN_15 => Arith_xor4to1:x6.x2
+dIN_16 => Arith_xor2to1:d15_and16.x1
+dIN_17 => Arith_xor2to1:d17_and18.x0
+dIN_17 => Arith_xor2to1:d_15to17.x1
+dIN_17 => Arith_xor3to1:d12o_14_17.x2
+dIN_18 => Arith_xor2to1:d17_and18.x1
+dIN_18 => Arith_xor2to1:d18_and19.x0
+dIN_18 => Arith_xor4to1:x5.x2
+dIN_19 => Arith_xor2to1:d18_and19.x1
+dIN_19 => Arith_xor2to1:d19_and20.x0
+dIN_19 => Arith_xor4to1:x6.x3
+dIN_20 => Arith_xor2to1:d19_and20.x1
+dIN_20 => Arith_xor2to1:d20_and21.x0
+dIN_21 => Arith_xor2to1:d20_and21.x1
+dIN_21 => Arith_xor2to1:d21_and22.x0
+dIN_21 => Arith_xor2to1:D21_to23.x0
+dIN_22 => Arith_xor2to1:d21_and22.x1
+dIN_22 => Arith_xor2to1:d22_and23.x0
+dIN_23 => Arith_xor2to1:d22_and23.x1
+CRC_0 <= Arith_xor4to1:x0.y
+CRC_1 <= Arith_xor4to1:x1.y
+CRC_2 <= Arith_xor4to1:x2.y
+CRC_3 <= Arith_xor4to1:x3.y
+CRC_4 <= Arith_xor4to1:x4.y
+CRC_5 <= Arith_xor4to1:x5.y
+CRC_6 <= Arith_xor4to1:x6.y
+CRC_7 <= Arith_xor3to1:x7.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d8_and10
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d8_and9
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d9_and10
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d15_and16
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d13_and15
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d17_and18
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d18_and19
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d19_and20
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d20_and21
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d21_and22
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d22_and23
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d8_to10
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d9_to11
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d_15to17
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d_14to16
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:d13_to15
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor3to1:d12o_14_17
+x0 => Arith_xor2to1:xor_1.x0
+x1 => Arith_xor2to1:xor_1.x1
+x2 => Arith_xor2to1:xor_final.x1
+y <= Arith_xor2to1:xor_final.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor3to1:d12o_14_17|Arith_xor2to1:xor_1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor3to1:d12o_14_17|Arith_xor2to1:xor_final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:D20_to23
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor2to1:D21_to23
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x0
+x0 => Arith_xor2to1:xor_1.x0
+x1 => Arith_xor2to1:xor_1.x1
+x2 => Arith_xor2to1:xor_2.x0
+x3 => Arith_xor2to1:xor_2.x1
+y <= Arith_xor2to1:xor_final.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x0|Arith_xor2to1:xor_1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x0|Arith_xor2to1:xor_2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x0|Arith_xor2to1:xor_final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x1
+x0 => Arith_xor2to1:xor_1.x0
+x1 => Arith_xor2to1:xor_1.x1
+x2 => Arith_xor2to1:xor_2.x0
+x3 => Arith_xor2to1:xor_2.x1
+y <= Arith_xor2to1:xor_final.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x1|Arith_xor2to1:xor_1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x1|Arith_xor2to1:xor_2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x1|Arith_xor2to1:xor_final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x2
+x0 => Arith_xor2to1:xor_1.x0
+x1 => Arith_xor2to1:xor_1.x1
+x2 => Arith_xor2to1:xor_2.x0
+x3 => Arith_xor2to1:xor_2.x1
+y <= Arith_xor2to1:xor_final.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x2|Arith_xor2to1:xor_1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x2|Arith_xor2to1:xor_2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x2|Arith_xor2to1:xor_final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x3
+x0 => Arith_xor2to1:xor_1.x0
+x1 => Arith_xor2to1:xor_1.x1
+x2 => Arith_xor2to1:xor_2.x0
+x3 => Arith_xor2to1:xor_2.x1
+y <= Arith_xor2to1:xor_final.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x3|Arith_xor2to1:xor_1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x3|Arith_xor2to1:xor_2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x3|Arith_xor2to1:xor_final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x4
+x0 => Arith_xor2to1:xor_1.x0
+x1 => Arith_xor2to1:xor_1.x1
+x2 => Arith_xor2to1:xor_2.x0
+x3 => Arith_xor2to1:xor_2.x1
+y <= Arith_xor2to1:xor_final.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x4|Arith_xor2to1:xor_1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x4|Arith_xor2to1:xor_2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x4|Arith_xor2to1:xor_final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x5
+x0 => Arith_xor2to1:xor_1.x0
+x1 => Arith_xor2to1:xor_1.x1
+x2 => Arith_xor2to1:xor_2.x0
+x3 => Arith_xor2to1:xor_2.x1
+y <= Arith_xor2to1:xor_final.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x5|Arith_xor2to1:xor_1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x5|Arith_xor2to1:xor_2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x5|Arith_xor2to1:xor_final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x6
+x0 => Arith_xor2to1:xor_1.x0
+x1 => Arith_xor2to1:xor_1.x1
+x2 => Arith_xor2to1:xor_2.x0
+x3 => Arith_xor2to1:xor_2.x1
+y <= Arith_xor2to1:xor_final.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x6|Arith_xor2to1:xor_1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x6|Arith_xor2to1:xor_2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor4to1:x6|Arith_xor2to1:xor_final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor3to1:x7
+x0 => Arith_xor2to1:xor_1.x0
+x1 => Arith_xor2to1:xor_1.x1
+x2 => Arith_xor2to1:xor_final.x1
+y <= Arith_xor2to1:xor_final.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor3to1:x7|Arith_xor2to1:xor_1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|Arith_xor3to1:x7|Arith_xor2to1:xor_final
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
