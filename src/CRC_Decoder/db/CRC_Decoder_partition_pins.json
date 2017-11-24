@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CRC_err[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC_err[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC_err[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC_err[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC_err[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC_err[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC_err[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CRC_err[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Check",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[16]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[21]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[22]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[23]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[17]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[18]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[19]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[20]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dIN[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
